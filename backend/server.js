@@ -38,6 +38,7 @@ app.get('/', (req, res) => {
 
 app.use(router);
 app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/items", require("./routes/itemRoutes"));
 
 
 app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));
