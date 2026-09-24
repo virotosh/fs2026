@@ -11,10 +11,12 @@ const {
     registerUser,
     loginUser,
     userProfile,
+    logoutUser,
  } = require("../controllers/userController");
  
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.post("/profile", authMiddleware, userProfile);
+router.post("/logout", logoutUser);
 
 module.exports = router;
