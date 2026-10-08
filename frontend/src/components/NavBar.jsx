@@ -42,6 +42,18 @@ const NavBar = () => {
                            </>
                        )}
                        {isLoggedIn && (
+                          <>
+                          <li>
+                              <Link
+                                  className="text-white hover:text-gray-300 text-lg"
+                                  to="/createitem"
+                              >
+                                  Create Item
+                              </Link>
+                          </li>
+                          </>
+                      )}
+                       {isLoggedIn && (
                            <>
                            <li>
                                <Link
