@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./contexts/AuthContext";
 import { useState, useEffect } from "react";
 
@@ -38,6 +40,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route
+             path="/profile"
+             element={<ProtectedRoute component={Profile} />}
+           />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
