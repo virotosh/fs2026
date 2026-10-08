@@ -9,7 +9,7 @@ import CreateItem from "./components/CreateItem";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./contexts/AuthContext";
 import { useState, useEffect } from "react";
-
+import Cart from "./components/Cart";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -51,6 +51,11 @@ function App() {
              path="/createitem"
              element={<ProtectedRoute component={CreateItem} />}
            />
+          <Route
+             path="/cart"
+             element={<ProtectedRoute component={Cart} />}
+           />
+
         </Routes>
       </BrowserRouter>
     </AuthProvider>
