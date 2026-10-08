@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -44,6 +45,7 @@ function App() {
              path="/profile"
              element={<ProtectedRoute component={Profile} />}
            />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
